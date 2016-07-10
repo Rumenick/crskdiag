@@ -21,18 +21,18 @@ void diag_prop(double *times, int *cause, double *designX, int *N, int *M,
 	
 	double tmp1;	
 	//double gn[*N];
-	vector *gn;
-	vector *sqSI,*E,*tmpv1,*tmpv2,*xi,*rowX; //M; 
-	vector *maxB1t,*maxB2t,*rrt; //M+1
-	vector *z,*Gbeta;   //N
-	vector *S0j,*absB1t,*absB2t,*absB1t_all,*absB2t_all;   //N+1
+	::vector *gn;
+	::vector *sqSI,*E,*tmpv1,*tmpv2,*xi,*rowX; //M; 
+	::vector *maxB1t,*maxB2t,*rrt; //M+1
+	::vector *z,*Gbeta;   //N
+	::vector *S0j,*absB1t,*absB2t,*absB1t_all,*absB2t_all;   //N+1
 	matrix *SI;  //M*M*/
 	matrix *WX,*Wbeta,*eta;  //N*M
 	matrix *Ej,*Uj,*tmpB1t,*tmpB2t,*Ct;     //(N+1)*M
-	//vector *wy[*N],*wdn1[*N],*wdm1[*N];  //(N+1)*N
+	//::vector *wy[*N],*wdn1[*N],*wdm1[*N];  //(N+1)*N
 	matrix *wy,*wdn1,*wdm1;  //(N+1)*N
-	//vector *eta[*N];   //M*N
-	//vector *Ct[*N+1];
+	//::vector *eta[*N];   //M*N
+	//::vector *Ct[*N+1];
 	//matrix *W1t[*N+1],*W2t[*N+1];
 	matrix3 *W1t,*W2t;   //(N+1)*N*M
 	
@@ -186,22 +186,22 @@ void diag_lin(double *times, int *cause, double *designX, int *N, int *M,
 	double tmp1;
 	//double gn[*N];
 	//double *gn;
-	//vector<double> gn(*N);	
-	vector *gn;
-	vector *tmpv1,*tmpv2,*xi,*E,*rowX; //M
-	vector *maxB1,*maxB2,*rr;  //M+1
-	vector *z,*Gbeta,*absB1,*absB2; //N
-	vector *S0j; //N+1
+	//::vector<double> gn(*N);	
+	::vector *gn;
+	::vector *tmpv1,*tmpv2,*xi,*E,*rowX; //M
+	::vector *maxB1,*maxB2,*rr;  //M+1
+	::vector *z,*Gbeta,*absB1,*absB2; //N
+	::vector *S0j; //N+1
 	matrix *SI;  //M*M
 	matrix *WX,*eta,*C;  //N*M
 	matrix *tmpB1a,*W1,*tmpB1,*tmpB2,*tmpB2a,*tmpB2b; //N*(M+1) 
 	matrix *g;   //N*(N+1)
 	matrix *Ej,*Uj;     //(N+1)*M
-	//vector *ind[*M+1],*zst[*M+1],*uniz[*M+1];
-	vector *ind,*zst,*uniz;   //N
-	//vector *wy[*N],*wdn1[*N],*wdm1[*N];  //(N+1)*N
+	//::vector *ind[*M+1],*zst[*M+1],*uniz[*M+1];
+	::vector *ind,*zst,*uniz;   //N
+	//::vector *wy[*N],*wdn1[*N],*wdm1[*N];  //(N+1)*N
 	matrix *wy,*wdn1,*wdm1;  //(N+1)*N
-	//vector *eta[*N],*C[*N];   //M*N
+	//::vector *eta[*N],*C[*N];   //M*N
 	//matrix *W[*N],*W2[*N],*W3[*N]; //N*(M+1)*N
 	//matrix *W2[*N],*W3[*N]; //N*(M+1)*N
 	matrix3 *W2,*W3;  //N*(M+1)*N matrix3

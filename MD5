@@ -1,4 +1,4 @@
-51794fc60580087aa7ecdc1196e0b732 *DESCRIPTION
+dd380e385566d450a3846d5e5df0d4ed *DESCRIPTION
 1154900a7fca94518ae8a234d7c1502b *NAMESPACE
 0836bb160fd45b3e25385d13a51f9e73 *R/diag_lin.R
 ec864ba134890be14d6832c942ae63af *R/diag_prop.R
@@ -16,8 +16,8 @@ fe7cb568f477201b059ada1f695dcb0f *man/diag_prop.Rd
 2cf6ff85ab2222fd9f7988ed3156248c *man/print.diaglin.Rd
 3dcd46a9ccc187e715f302ba3f038654 *man/print.diagprop.Rd
 df383a8c159a90cd7b1a23b6350040a8 *src/Makevars
-25fc247e1833b7f00829a2d531070e0e *src/diag.cc
-6cc2bb7b10951de2c0354c4e6eb4b2d1 *src/matrix.h
+286f19de4bdacb0e556f38a635b76642 *src/diag.cc
+e99833f75fb3ba07abba64166e429759 *src/matrix.h
 fd1d5750ade49621ed1586570cd86561 *src/mymat.cc
-6228e3b79da8910792523c286daf9006 *src/util.cc
-49b0928b248a1c65ae3d7f215c042943 *src/util.h
+eda2c6986eaf252edb3cc3cd337381f5 *src/util.cc
+1722fd8e868f1b2113da53bce0748ac0 *src/util.h

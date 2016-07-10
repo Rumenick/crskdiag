@@ -26,7 +26,7 @@
 //#define malloc_mat3(DIM,NR, NC, M3) {(M3) = Calloc(1,matrix); ((M3)->dim)=(DIM); ((M3)->nr) = (NR); ((M3)->nc) = (NC); ((M3)->entries) = Calloc(((DIM)*(NR)*(NC)) , double);}
 //JL
 #define malloc_mat3(DIM,NR, NC, M3) {(M3) = Calloc(1,matrix3); ((M3)->dim)=(DIM); ((M3)->nr) = (NR); ((M3)->nc) = (NC); ((M3)->entries) = Calloc(((DIM)*(NR)*(NC)) , double);}
-#define malloc_vec(L, V) { (V) = Calloc(1,vector); ((V)->length) = (L); ((V)->entries) = Calloc((L), double);}
+#define malloc_vec(L, V) { (V) = Calloc(1,::vector); ((V)->length) = (L); ((V)->entries) = Calloc((L), double);}
 
 typedef struct{
   int dim;

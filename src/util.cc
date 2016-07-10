@@ -5,20 +5,20 @@
 #include "util.h"
 
 void est_tmp(double *times, int *cause, matrix *WX, int *N, int *M, 
-		int *Nit, int *NJP, double *TJP, double *betaS, double *beta_var, double *dlamb0, vector *Gbeta, 
-		matrix *eta, matrix *wy, matrix *wdn1, matrix *wdm1, vector *S0j, matrix *Ej, matrix *Uj, matrix *SI, int *minor_included){
+		int *Nit, int *NJP, double *TJP, double *betaS, double *beta_var, double *dlamb0, ::vector *Gbeta, 
+		matrix *eta, matrix *wy, matrix *wdn1, matrix *wdm1, ::vector *S0j, matrix *Ej, matrix *Uj, matrix *SI, int *minor_included){
 					
 	int njp;
 	double S0,ebz,ss,tmp,dnci,yi;
-	vector *beta,*U,*S1,*dS0,*xi,*E,*tmpv1,*delta,*sqSI,*rowX,*q;  //M
-	vector *Idxt;  //N
-	vector *survc,*dnc,*dlambc,*yl;   //N+1
+	::vector *beta,*U,*S1,*dS0,*xi,*E,*tmpv1,*delta,*sqSI,*rowX,*q;  //M
+	::vector *Idxt;  //N
+	::vector *survc,*dnc,*dlambc,*yl;   //N+1
 	matrix *I,*S2,*tmpm1,*tmpm2,*tmpm3,*Sigma; //M*M 
 	matrix *qj;
 	matrix *minor;  //M*N
 	matrix *dmc;	//N*(N+1)
-	// vector *minor[*N]; //M*N
-	// vector *dmc[*N]; //N length of N+1 vectors
+	// ::vector *minor[*N]; //M*N
+	// ::vector *dmc[*N]; //N length of N+1 ::vectors
 
 	
 	malloc_vecs(*M,&beta,&U,&S1,&dS0,&xi,&E,&tmpv1,&delta,&sqSI,&rowX,&q,NULL);
@@ -234,7 +234,7 @@ void est_tmp(double *times, int *cause, matrix *WX, int *N, int *M,
 	// }
 }
 
-void sort(vector *in, vector *out){
+void sort(::vector *in, ::vector *out){
 	double tmp;
 	vec_copy(in,out);
 	int n = length_vector(in);
@@ -250,9 +250,9 @@ void sort(vector *in, vector *out){
 	return;
 }
 
-void indsort(vector *in, vector *out, vector *ind){	
+void indsort(::vector *in, ::vector *out, ::vector *ind){	
 	int n = length_vector(in);
-	vector *tmpv1;
+	::vector *tmpv1;
 	malloc_vec(n,tmpv1);
 	vec_copy(in,tmpv1);
 	sort(in,out);
@@ -270,10 +270,10 @@ void indsort(vector *in, vector *out, vector *ind){
 	return;
 }
 
-int unisort(vector *in, vector *out){
+int unisort(::vector *in, ::vector *out){
 	int cnt=0;
 	int m;
-	vector *tmpv1;
+	::vector *tmpv1;
 	int n = length_vector(in);
 	malloc_vec(n,tmpv1);
 	sort(in,tmpv1);
@@ -293,8 +293,8 @@ int unisort(vector *in, vector *out){
 	return m;
 }
 
-double vec_max(vector *in){
-	vector *tmpv1;
+double vec_max(::vector *in){
+	::vector *tmpv1;
 	int n = length_vector(in);
 	malloc_vec(n,tmpv1);
 	sort(in,tmpv1);
@@ -318,7 +318,7 @@ double mat_max(matrix *in){
 }
 
 // m := t(v)*t, JN
-matrix *vtv(vector *v1, vector *v2, matrix *m){
+matrix *vtv(::vector *v1, ::vector *v2, matrix *m){
 	int i,j;
 	int n = length_vector(v1);
 	if(!(length_vector(v2)==n)){
